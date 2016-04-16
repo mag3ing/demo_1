@@ -1,0 +1,43 @@
+.banner-wrap{
+    position: relative;
+}
+.banner-pointer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 999;
+    left: 2%;
+}
+.banner{
+    /*padding: 10px 0;*/
+    position: relative;
+    height: 175px;
+    overflow: hidden;
+}
+.banner-pointer span{
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.banner-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+.banner-move{
+    position:static;
+    z-index: 99;
+}
+.banner-pointer .p-color{
+    background:#FFFFFF;
+    transition: 0.3s background;
+}
+.banner-move{
+    transition: 0.3s transform;
+    -webkit-transition: 0.3s -webkit-transform;
+}
