@@ -5,7 +5,7 @@
 module.exports = {
     devtool: 'inline-source-map',
     entry: [
-        'webpack-hot-middleware',
+        'webpack-hot-middleware/client',
         './index.js'
     ],
     output: {
@@ -38,7 +38,8 @@ module.exports = {
 
         ],
         query: {
-            presets: ["es2015","react",'react-hmre']
+            presets: ["es2015","react",'react-hmre'],
+            plugins: ["transform-react-jsx"]
         }
     }
 };

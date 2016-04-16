@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 // import Banner from './banner/banner.js';
 
 ReactDOM.render(
-    <div>hello mag3ing :)</div>
+    <div>set success :)</div>
     ,
     document.getElementById('content')
 );
+module.hot.accept();

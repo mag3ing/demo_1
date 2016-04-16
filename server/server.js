@@ -12,7 +12,7 @@ var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler,{noInfo: true, publicPath: config.output.publicPath}));
 app.use(webpackHotMiddleware(compiler));
 
-app.use(express.static('./bundle'));
+// app.use(express.static('./bundle'));
 app.use('/', function(req, res){
     res.sendFile(path.resolve('index.html'));
 });
