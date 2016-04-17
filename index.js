@@ -4,9 +4,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Banner from './banner/banner.js';
-
+import TodoApp from './components/TodoApp.jsx'
 ReactDOM.render(
-    <div>set success :)</div>
+    <TodoApp />
     ,
     document.getElementById('content')
 );
