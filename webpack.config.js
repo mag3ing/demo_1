@@ -2,6 +2,8 @@
  * Created by mag on 16-4-4.
  */
  var  webpack = require('webpack');
+var qs = require('querystring');
+var path = require('path');
 module.exports = {
     devtool: 'inline-source-map',
     entry: [
@@ -10,7 +12,7 @@ module.exports = {
         './index.js'
     ],
     output: {
-        path: __dirname + '/bundle/',
+        path: __dirname,
         publicPath: '/bundle/',
         filename: 'bundle.js'
     },
@@ -30,11 +32,20 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader?'
+                include: path.join(__dirname),
+                loader: 'style-loader!css-loader?' + qs.stringify({
+                    modules: true,
+                    importLoaders: 1,
+                    localIdentName: '[path][name]-[local]'
+                })
             },
             {
                 test: /.(jpg|png)$/,
                 loader:'url-loader'
+            },
+            {
+                test: /\.ogg$/,
+                loader: 'file'
             }
 
         ],
